@@ -52,6 +52,8 @@ def receive():
         nicknames.append(nickname)
         clients.append(client)
 
+        broadcast(f" Available users: {nicknames}\n".encode('utf-8'))
+
         print(f"Nickname of the client is: {nickname}")
         broadcast(f"{nickname} connected to the server!\n ".encode("utf-8"))
         client.send("Connected to the server".encode("utf-8"))

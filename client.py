@@ -3,6 +3,7 @@ import threading
 import tkinter
 import tkinter.scrolledtext
 from tkinter import simpledialog
+from ui import Login
 
 HOST = '127.0.0.1'
 PORT = 8000
@@ -35,14 +36,9 @@ class Client:
         self.chat_label.config(font=("Comic Sans MS", 12))
         self.chat_label.pack(padx=20, pady=5)
 
-        #self.users = tkinter.scrolledtext.ScrolledText(self.win, bg="#FFB6C1", fg="white")
-        #self.users.pack(padx=20, pady=5)
-        #self.users.config(state='disabled')
-
         self.text_area = tkinter.scrolledtext.ScrolledText(self.win, bg="lightgray")
         self.text_area.pack(padx=20, pady=5)
         self.text_area.config(state='disabled')  # disabled ->content canot be changed programatically
-
 
         self.msg_label = tkinter.Label(self.win, text="Write...", bg="magenta", fg="white")
         self.msg_label.config(font=("Comic Sans MS", 12))
