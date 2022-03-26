@@ -13,8 +13,6 @@ clients = []
 nicknames = []
 
 
-# we want to do many things at once -> so multithread
-
 # broadcast -> send received msg to all the messangers (clients)
 def broadcast(msg):
     for client in clients:
